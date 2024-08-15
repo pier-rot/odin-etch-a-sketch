@@ -8,7 +8,7 @@ function generateRows(numberOfRows) {
 		const name = document.createAttribute("id");
 		name.value = `row-${i}`;
 		row.style.display = "flex";
-		row.style.width = `90vw`;
+		row.style.width = `100vw`;
 		row.setAttributeNode(name);
 		row.setAttribute("class", "row");
 	}
@@ -40,7 +40,6 @@ function generateGrid(numberOfColumns) {
 			div.style.height = `${100 / numberOfColumns}vh`;
 			div.style.flex = 1;
 			div.style.backgroundColor = "lightgrey";
-			div.style.margin = "4px";
 
 			div.addEventListener("mouseenter", () => {
 				div.style.backgroundColor = "black";
