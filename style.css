@@ -1,0 +1,8 @@
+body {
+    max-height: 98vh;
+}
+
+.grid-square {
+    background-color: black;
+    margin: 2vw;
+}
