@@ -37,7 +37,7 @@ function generateGrid(numberOfColumns) {
 			div.setAttribute("col-pos", `${j}`);
 			div.setAttribute("class", "grid-square");
 
-			div.style.height = `${100 / numberOfColumns}vh`;
+			div.style.height = `${100 / numberOfColumns}vw`;
 			div.style.flex = 1;
 			div.style.backgroundColor = "lightgrey";
 
@@ -46,8 +46,9 @@ function generateGrid(numberOfColumns) {
 			});
 			div.addEventListener("mouseleave", handleMouseLeave, true);
 			div.addEventListener("click", () => {
-				div.style.backgroundColor = "black";
-				div.removeEventListener("mouseleave", handleMouseLeave, true);
+                div.style.backgroundClip = "black";
+                div.removeEventListener("mouseleave", handleMouseLeave, true);
+				
 			});
 			currentRow.appendChild(div);
 		}
